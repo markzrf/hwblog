@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div>
+
+<%-if logged_in?%>
+welcome ! <%=current_user.login%>
+<%=link_to "logout",logout_path%>
+<%else%>
+<%=link_to "login",login_path%>
+<%end%>
+</div>
+<%= yield %>
+
+</body>
+</html>

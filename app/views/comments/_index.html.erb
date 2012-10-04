@@ -1,0 +1,11 @@
+<%comments=index%>
+<%-if comments.size >0 %>
+
+<%comments.each do |commnet|%>
+
+<p>
+  <b>Body:</b>
+  <%= commnet.body %>
+</p>
+<%end%>
+<%end%>
